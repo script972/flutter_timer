@@ -1,0 +1,17 @@
+{
+  "app_name": "Gym timer",
+  "round": "{number} Round",
+  "round_description" : "Duration of {number} round in seconds",
+  "work" : "Work",
+  "rest" : "Rest",
+  "txt": {
+    "input_round": "Number of round",
+    "input_duration_of_round_work": "Work duration",
+    "input_duration_of_round_rest": "Rest duration"
+  },
+  "btn": {
+    "save": "Save",
+    "generate_timer_field": "Generate",
+    "Start": "Start"
+  }
+}

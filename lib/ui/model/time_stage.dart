@@ -1,0 +1,3 @@
+enum TimeStage {
+  WORK, REST
+}
