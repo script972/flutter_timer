@@ -6,6 +6,7 @@ class CustomRoute {
   static const String TIMER_SCREEN = '/TIMER';
   static const String SETUP_SCREEN = '/SETUP';
 
+  //process routing
   static Route<dynamic> generateRoute(RouteSettings settings) {
     Widget screen = SetupScreen();
     final args = settings.arguments;

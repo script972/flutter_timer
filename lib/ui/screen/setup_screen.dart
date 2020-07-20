@@ -24,23 +24,22 @@ class _SetupScreenState extends State<SetupScreen> {
         body: WillPopScope(
           onWillPop: () {},
           child: SafeArea(
-              child: BaseScreen(
-                  child: BlocBuilder<SetupBloc, SetupState>(
-                    builder: (context, state) {
-                      if (state is InitialSetupState) {
-                        return Center(
-                          child: SingleChildScrollView(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: <Widget>[
-                                  formContent(state.numberField ?? 0, state),
-                                ],
-                              )),
-                        );
-                      }
-                    },
-                  ))),
+              child: BaseScreen(child: BlocBuilder<SetupBloc, SetupState>(
+            builder: (context, state) {
+              if (state is InitialSetupState) {
+                return Center(
+                  child: SingleChildScrollView(
+                      child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      formContent(state.numberField ?? 0, state),
+                    ],
+                  )),
+                );
+              }
+            },
+          ))),
         ),
       );
 
@@ -102,6 +101,7 @@ class _SetupScreenState extends State<SetupScreen> {
         ),
       );
 
+  // Building each field in the loop by parameter numberField
   Widget fieldItem(int numberField) => Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -164,6 +164,7 @@ class _SetupScreenState extends State<SetupScreen> {
         ],
       );
 
+  // Styling for text field decoration
   InputDecoration get _inputDecoration => InputDecoration(
         fillColor: Color(0xFFFFFFFF),
         filled: true,

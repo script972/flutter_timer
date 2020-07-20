@@ -28,10 +28,10 @@ class Application extends StatelessWidget {
       child: MultiBlocProvider(
         providers: [
           BlocProvider<TimerBloc>(
-            create: (context) => TimerBloc() /*..add(LoadMain())*/,
+            create: (context) => TimerBloc(),
           ),
           BlocProvider<SetupBloc>(
-            create: (context) => SetupBloc() /*..add(LoadMain())*/,
+            create: (context) => SetupBloc(),
           ),
         ],
         child: MaterialApp(
