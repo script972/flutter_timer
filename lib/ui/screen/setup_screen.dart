@@ -25,18 +25,22 @@ class _SetupScreenState extends State<SetupScreen> {
           onWillPop: () {},
           child: SafeArea(
               child: BaseScreen(
-                  child: Column(
-            children: <Widget>[
-              BlocBuilder<SetupBloc, SetupState>(
-                builder: (context, state) {
-                  if (state is InitialSetupState) {
-                    return SingleChildScrollView(
-                        child: formContent(state.numberField ?? 0, state));
-                  }
-                },
-              )
-            ],
-          ))),
+                  child: BlocBuilder<SetupBloc, SetupState>(
+                    builder: (context, state) {
+                      if (state is InitialSetupState) {
+                        return Center(
+                          child: SingleChildScrollView(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  formContent(state.numberField ?? 0, state),
+                                ],
+                              )),
+                        );
+                      }
+                    },
+                  ))),
         ),
       );
 
@@ -105,7 +109,9 @@ class _SetupScreenState extends State<SetupScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "${translate(Keys.Round_Description, args: {"number": numberField+1})}",
+              "${translate(Keys.Round_Description, args: {
+                "number": numberField + 1
+              })}",
               style: TextStyle(fontSize: 16.0, color: Colors.white),
             ),
           ),
