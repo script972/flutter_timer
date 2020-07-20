@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/ui/model/rounde_model.dart';
+import 'package:flutter_app/ui/model/round_model.dart';
 
 @immutable
 abstract class TimerEvent extends Equatable {

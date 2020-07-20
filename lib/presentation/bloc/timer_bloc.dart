@@ -5,7 +5,7 @@ import 'package:flutter_app/domain/repository/impl/info_repository_impl.dart';
 import 'package:flutter_app/domain/repository/info_repository.dart';
 import 'package:flutter_app/presentation/event/timer_event.dart';
 import 'package:flutter_app/presentation/state/timer_state.dart';
-import 'package:flutter_app/ui/model/rounde_model.dart';
+import 'package:flutter_app/ui/model/round_model.dart';
 import 'package:flutter_app/ui/model/time_stage.dart';
 import 'package:flutter_app/utils/ticker.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

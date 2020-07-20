@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter_app/presentation/event/setup_event.dart';
 import 'package:flutter_app/presentation/state/setup_state.dart';
-import 'package:flutter_app/ui/model/rounde_model.dart';
+import 'package:flutter_app/ui/model/round_model.dart';
 
 class SetupBloc extends Bloc<SetupEvent, SetupState> {
   int numberOfForms = 0;
